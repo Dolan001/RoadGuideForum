@@ -1,0 +1,72 @@
+/*home page*/
+#main_content{
+    background: #eaeaea;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#proname{
+    background: #eaeaea;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+#name{
+    padding: 5px;
+}
+#article_details{
+    width: 100%;
+}
+#article{
+    margin: 0px 30px;
+    background: white;
+}
+#div_article{
+    padding: 20px;
+}
+.article_title{
+    margin-left: 35px;
+}
+#article_react_bg{
+    width: 100%;
+    margin-bottom: 15px;
+}
+#article_react{
+    margin: 0px 30px;
+    background: white;
+}
+.table-responsive{
+    padding: 20px;
+}
+
+
+/*add_article page*/
+#inputTitle{
+
+}
+.article_content{
+    margin-top: 20px;
+    background: #eaeaea;
+    border-radius: 5px;
+}
+#formtitle{
+    font-family: Arial;
+    font-weight: bold;
+}
+#textEditor{
+    width: 100%;
+    height: 250px;
+}
+#form-container{
+    padding: 20px 100px;
+}
+.article_btn{
+    margin: 10px;
+    width: 100px;
+}
+#article_btn_upload{
+
+}
+/*article page*/
+.vl {
+    border-left: 5px solid gray;
+    height: 100%;
+}

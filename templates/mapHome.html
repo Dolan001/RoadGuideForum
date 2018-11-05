@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'homestyle.css', v=4876536) }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="jquery-3.0.0.min.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script  defer src="https://maps.googleapis.com/maps/api/js?libraries=places&language=en&key=AIzaSyCGU0PK5ks0K4jqqAZ6l2A6FKWUknklPkM"  type="text/javascript"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+</head>
+<body style="background: #D3D3D3">
+<div id="wrapper">
+    <div id="sidebar-wrapper" style="overflow:scroll">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 id="sidebar_appName"><b>RoadGuide</b></h2>
+            </div>
+        </div>
+        <div class="row sidebaroptions">
+            <div class="col-md-12 col-sm-12 col-xs-12 travelling_mode">
+                <input type="radio" name="type" id="changemode-walking" checked="checked">
+                <label for="changemode-walking">Walking</label>
+                <br>
+                <input type="radio" name="type" id="changemode-transit">
+                <label for="changemode-transit">Transit</label>
+                <br>
+                <input type="radio" name="type" id="changemode-driving">
+                <label for="changemode-driving">Driving</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h3 class="sidebarContent">Place Details</h3>
+                <div class="row sidebaroptions">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4>Origin address:</h4>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4 id="address"></h4>
+                    </div>
+                </div>
+                <!--
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4>lat:</h4>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4 id="lat">dgg</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4>lng:</h4>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4 id="lng">dgg</h4>
+                    </div>
+                </div>
+                -->
+                <div class="row sidebaroptions">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4>Destination address:</h4>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4 id="address1"></h4>
+                    </div>
+                </div>
+                <!--
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4>lat:</h4>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4 id="lat1">dgg</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4>lng:</h4>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4 id="lng1">dgg</h4>
+                    </div>
+                </div>
+                -->
+                <!--
+                <ul>
+                    <li id="address"></li>
+                    <li id="lat"></li>
+                    <li id="lng"></li>
+                </ul>
+                <ul>
+                    <li id="address1"></li>
+                    <li id="lat1"></li>
+                    <li id="lng1"></li>
+                </ul>
+                -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h3 class="sidebarContent">Road Details</h3>
+                <div class="row sidebaroptions">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4>Distance:</h4>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4 id="distanceInKm"></h4>
+                    </div>
+                </div>
+                <div class="row sidebaroptions">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4>Duration:</h4>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <h4 id="duration"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse" id="navbar-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <button type="button" class="navbar-brand" id="menu-toggle">
+                            <i class="fa fa-navicon"></i>
+                        </button>
+                        <form id="search_input" class="form-container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-4">
+                                    <input type="text" id="origin-input" class="form-control" placeholder="Enter your first name">
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-4">
+                                    <input type="text" id="destination-input" class="form-control" placeholder="Enter your last name">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li id="appName"><a href="#">RoadGuide</a></li>
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="{{ url_for('profile', username=username) }}">Profile</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><div style="border-radius: 8px">{{ username }}</div></li>
+                            <li><a href="{{ url_for('home') }}">Forum</a></li>
+                            <li><a href="{{ url_for('logout') }}" id="signout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" id="content_bg">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script>
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5YXg4v0vVkGKv0Erm_LsrHeGJW2qJeEM&callback=initMap"
+    async defer></script>
+<script type="text/javascript" src="homejs2.js"></script>
+
+</body>
+</html>
+<!--AIzaSyC5YXg4v0vVkGKv0Erm_LsrHeGJW2qJeEM-->
